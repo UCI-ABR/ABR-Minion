@@ -166,6 +166,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 	//lidar scan
 	int Index = 1;
+	int wholeRobotScan;
 	
 	//timers
 	int pauseCounter = 0;
@@ -482,7 +483,6 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			receive_from_M("DEST");//add server stuff
 			dest_loc = destinationCoords;
 			autoMode = autoModefromM;
-			scanMode = scanModefromM;
 
 			if(System.currentTimeMillis()-startTime > 9000000)
 				autoMode = false;
@@ -514,9 +514,20 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				m_ioio_thread.set_speed(1500);
 				if(curr_loc == bottomRight)
 				{
-					m_ioio_thread.set_speed(1500);
-					m_ioio_thread.set_steering(1600);
-					curr_loc.bearingTo(topRight);
+				    if (Index == 0 && wholeRobotScan == 11) {
+                        m_ioio_thread.set_steering(1500);
+                        initialFieldScan = false;
+                    }
+				    else if(Index == 0) {
+                        m_ioio_thread.set_steering(1600);
+                        curr_loc.bearingTo(topRight);
+                        double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+                        double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
+                        send_to_M(minion, locationCoords, false, lgpsCoords);
+                        wholeRobotScan++;
+                    }
+                    Index++;
+                    Index = Index % 15;
 				}
 			}
 
