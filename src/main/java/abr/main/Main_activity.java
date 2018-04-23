@@ -498,7 +498,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						panVal--;
                         double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                         double [] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0],locationCoords[1],pulseDistance, heading);
-						send_to_M(DOC, locationCoords, false, lgpsCoords);
+						send_to_M(minion, locationCoords, false, lgpsCoords);
 					} else if (Index == 0 && panVal == 1400) {
 						panVal = 1500;
 						initialFieldScan = false;
@@ -575,7 +575,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 							Log.v("app.main", "obstacle reached");
                             double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                             double[] notUsed = {0,0};
-                            send_to_M(DOC, locationCoords, true, notUsed);
+                            send_to_M(minion, locationCoords, true, notUsed);
 
 						}
 					}
@@ -597,7 +597,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					//backCounter = 5;
                     double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                     double[] notUsed = {0,0};
-                    send_to_M(DOC, locationCoords, true, notUsed);
+                    send_to_M(minion, locationCoords, true, notUsed);
 					if(m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
 						Log.v("app.main", "bucket on left");
 						backObstacleLeftCounter = 18;
