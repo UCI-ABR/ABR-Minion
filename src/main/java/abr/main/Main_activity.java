@@ -179,7 +179,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Long currTime;
 	
 	//pan/tilt
-	int panVal=1500;
+	int panVal=1600;
 	int tiltVal=1500;
 	boolean panningRight = false;
 	boolean tiltingUp = false;
@@ -295,8 +295,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		centerLocation.setLongitude((bottomRight.getLongitude()+topLeft.getLongitude())/2);
 
         dest_loc = new Location(""); //calculate the center point of the field
-        dest_loc.setLatitude(33.6424658);
-        dest_loc.setLongitude(-117.8244058);
+        dest_loc = topLeft;
 
 		
 		//set up location listener
@@ -512,20 +511,21 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					Log.i("hahaha","lidar scan");
 					m_ioio_thread.set_speed(1500);
 					m_ioio_thread.set_steering(1500);
-					tiltVal = 1600;
-					panVal = 1600;
-					if (Index == 0 && panVal <= 1600) {
+					if (Index == 0 && panVal == 1400) {
+						panVal = 1500;
+						initialFieldScan = false;
+                        Log.i("hahaha","panVal" + panVal);
+                        Log.i("hahaha","fieldscan" + initialFieldScan);
+					}
+					else if (Index == 0 && panVal <= 1600) {
 						panVal--;
+						Log.i("hahaha","panVal" + panVal);
 						//pulseDistance = 3; how to call pulsedistance from lidar?
 						double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                         double [] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0],locationCoords[1],pulseDistance, heading);
 						Log.i("hahaha","lidar value" + pulseDistance);
 						Log.i("hahaha","lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
 						//send_to_M(minion, locationCoords, false, lgpsCoords);
-					}
-					else if (Index == 0 && panVal == 1400) {
-						panVal = 1500;
-						initialFieldScan = false;
 					}
 
 					Index++;

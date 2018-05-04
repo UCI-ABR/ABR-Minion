@@ -6,25 +6,29 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="lgps" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="panVal" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09c9c3ef-adc4-4170-bb57-1ea483a31d1a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/abr/main/Client.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ABR-Minion.iml" afterPath="$PROJECT_DIR$/ABR-Minion.iml" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/resources-debug.ap_" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$2.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$2.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$2.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/ABR-Minion-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/ABR-Minion-debug.apk" />
       <change beforePath="$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java" afterPath="$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +55,11 @@
       <file leaf-file-name="Main_activity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-568">
-              <caret line="518" column="56" lean-forward="false" selection-start-line="518" selection-start-column="56" selection-end-line="518" selection-end-column="56" />
+            <state relative-caret-position="90">
+              <caret line="517" column="69" lean-forward="false" selection-start-line="517" selection-start-column="69" selection-end-line="517" selection-end-column="69" />
               <folding>
-                <element signature="e#31887#31888#0" expanded="true" />
-                <element signature="e#31922#31923#0" expanded="true" />
+                <element signature="e#31959#31960#0" expanded="true" />
+                <element signature="e#31994#31995#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,6 +100,7 @@
       <find>getCoord</find>
       <find>gps</find>
       <find>calculateMannequinnGps</find>
+      <find>panVal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1494,7 +1499,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1528,8 +1533,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#31887#31888#0" expanded="true" />
-            <element signature="e#31922#31923#0" expanded="true" />
+            <element signature="e#31959#31960#0" expanded="true" />
+            <element signature="e#31994#31995#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1549,8 +1554,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#31887#31888#0" expanded="true" />
-            <element signature="e#31922#31923#0" expanded="true" />
+            <element signature="e#31959#31960#0" expanded="true" />
+            <element signature="e#31994#31995#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1570,8 +1575,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#31887#31888#0" expanded="true" />
-            <element signature="e#31922#31923#0" expanded="true" />
+            <element signature="e#31959#31960#0" expanded="true" />
+            <element signature="e#31994#31995#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1613,11 +1618,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-568">
-          <caret line="518" column="56" lean-forward="false" selection-start-line="518" selection-start-column="56" selection-end-line="518" selection-end-column="56" />
+        <state relative-caret-position="90">
+          <caret line="517" column="69" lean-forward="false" selection-start-line="517" selection-start-column="69" selection-end-line="517" selection-end-column="69" />
           <folding>
-            <element signature="e#31887#31888#0" expanded="true" />
-            <element signature="e#31922#31923#0" expanded="true" />
+            <element signature="e#31959#31960#0" expanded="true" />
+            <element signature="e#31994#31995#0" expanded="true" />
           </folding>
         </state>
       </provider>
