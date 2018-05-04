@@ -74,6 +74,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 	//for Minion:
 	String fromMaster = "", toMaster = "";
+	Client mClient;
 
 	double[] lidarGPS = {0,0};
 	Location destinationCoords;
@@ -167,6 +168,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	//lidar scan
 	int Index = 1;
 	int wholeRobotScan;
+	float lidarPulse;
 	
 	//timers
 	int pauseCounter = 0;
@@ -190,6 +192,8 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 	//choose robot//*************************************************************************change accordingly********************************************************
 	Robots minion = DOC;
+
+
 	
 	// called to use OpenCV libraries contained within the app as opposed to a separate download
 	static {
@@ -233,6 +237,8 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		setContentView(R.layout.main);
 		
 		helper_.create(); // from IOIOActivity
+
+		//Robots.mClient = new Client(phoneIp,8080, response);
 		
 		//set up opencv camera
 		mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.color_blob_detection_activity_surface_view);
@@ -269,19 +275,28 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			buttonAuto.setBackgroundResource(R.drawable.button_auto_off);
 		}
 
+		Log.i("activity cycle","automode" + autoMode);
+
 		//find 4 corners**********************************************************************************
 		topLeft = new Location("");
-		topLeft.setLongitude(-117.826558);
-		topLeft.setLatitude(33.643253);
+		topLeft.setLongitude(-117.8244058);
+		topLeft.setLatitude(33.6424658);
 		bottomRight = new Location("");
-		bottomRight.setLongitude(-117.826044);
-		bottomRight.setLatitude(33.643221);
+		bottomRight.setLongitude(-117.8279541);
+		bottomRight.setLatitude(33.6415701);
 		topRight = new Location("");
-		topRight.setLongitude(-117.826558);
-		topRight.setLatitude(33.643253);
+		topRight.setLongitude(-117.8254757);
+		topRight.setLatitude(33.6406242);
 		bottomLeft = new Location("");
-		bottomLeft.setLongitude(-117.826044);
-		bottomLeft.setLatitude(33.643221);
+		bottomLeft.setLongitude(-117.8264017);
+		bottomLeft.setLatitude(33.6435566);
+		centerLocation = new Location(""); //calculate the center point of the field
+		centerLocation.setLatitude((bottomRight.getLatitude()+topLeft.getLatitude())/2);
+		centerLocation.setLongitude((bottomRight.getLongitude()+topLeft.getLongitude())/2);
+
+        dest_loc = new Location(""); //calculate the center point of the field
+        dest_loc.setLatitude(33.6424658);
+        dest_loc.setLongitude(-117.8244058);
 
 		
 		//set up location listener
@@ -478,28 +493,37 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		mSpectrum.copyTo(spectrumLabel);
 
 		// majority of control exists here
-		receive_from_M("AUTOMODE"); //add server stuff
+		//fromMaster = Robots.mClient.response;
 		if (autoMode && (System.currentTimeMillis()-startTime < 900000)) { // only move if autoMode is on and time under time limit
-			receive_from_M("DEST");//add server stuff
-			dest_loc = destinationCoords;
-			autoMode = autoModefromM;
+			//receive_from_M("DEST");//add server stuff
+			//dest_loc = destinationCoords;
+			//autoMode = autoModefromM;
+			Log.i("hahaha","starting");
+			dest_loc = new Location(""); //calculate the center point of the field
+			dest_loc.setLatitude(-117.826558); //for testing
+			dest_loc.setLongitude(33.643253); // for testing
 
 			if(System.currentTimeMillis()-startTime > 9000000)
 				autoMode = false;
 			//did i do this right? ****************************************************************************************************
 			if((minion == DOC || minion == MR || minion == MRS)  && initialFieldScan == true) {
 				//if lidar is on pan/tilt
-				if(curr_loc == topLeft || curr_loc == topRight || curr_loc == bottomLeft) {
+				//if(curr_loc == topLeft || curr_loc == topRight || curr_loc == bottomLeft) {
+					Log.i("hahaha","lidar scan");
 					m_ioio_thread.set_speed(1500);
 					m_ioio_thread.set_steering(1500);
-					tiltVal = 1500;
+					tiltVal = 1600;
 					panVal = 1600;
 					if (Index == 0 && panVal <= 1600) {
 						panVal--;
-                        double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
+						//pulseDistance = 3; how to call pulsedistance from lidar?
+						double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                         double [] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0],locationCoords[1],pulseDistance, heading);
-						send_to_M(minion, locationCoords, false, lgpsCoords);
-					} else if (Index == 0 && panVal == 1400) {
+						Log.i("hahaha","lidar value" + pulseDistance);
+						Log.i("hahaha","lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
+						//send_to_M(minion, locationCoords, false, lgpsCoords);
+					}
+					else if (Index == 0 && panVal == 1400) {
 						panVal = 1500;
 						initialFieldScan = false;
 					}
@@ -507,7 +531,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					Index++;
 					Index = Index % 15;
 				}
-			}
+			//}
 
 			else if ((minion == CARLITO) && initialFieldScan == true) {
 					//or if moving whole robot
@@ -523,7 +547,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
                         curr_loc.bearingTo(topRight);
                         double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
                         double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
-                        send_to_M(minion, locationCoords, false, lgpsCoords);
+                        //send_to_M(minion, locationCoords, false, lgpsCoords);
                         wholeRobotScan++;
                     }
                     Index++;
@@ -586,7 +610,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 							Log.v("app.main", "obstacle reached");
                             double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                             double[] notUsed = {0,0};
-                            send_to_M(minion, locationCoords, true, notUsed);
+                            //send_to_M(minion, locationCoords, true, notUsed);
 
 						}
 					}
@@ -594,7 +618,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						Log.v("app.main", "pause == 0");
 						m_ioio_thread.set_speed(1500+forwardSpeed);
 						m_ioio_thread.set_steering(1500);
-						dest_loc = destinationCoords;
+						//dest_loc = destinationCoords;
 
 					}
 				}
@@ -608,7 +632,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					//backCounter = 5;
                     double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
                     double[] notUsed = {0,0};
-                    send_to_M(minion, locationCoords, true, notUsed);
+                    //send_to_M(minion, locationCoords, true, notUsed);
 					if(m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
 						Log.v("app.main", "bucket on left");
 						backObstacleLeftCounter = 18;
@@ -758,7 +782,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
         //find lat
         find_colon = str.indexOf(':');
         find_comma = str.indexOf(',');
-        String first_num = str.substring(find_colon+1, find_comma-1);
+        String first_num = str.substring(find_colon+1, find_comma);
 
         //cut out lat
         str = str.substring(find_comma + 1, str.length());
@@ -766,7 +790,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
         //find lon
         find_colon = str.indexOf(':');
         find_comma = str.indexOf(']');
-        String sec_num = str.substring(find_colon+1, find_comma-1);
+        String sec_num = str.substring(find_colon+1, find_comma);
 
 
         coords = new Location("");
@@ -809,7 +833,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
          * @throws ConnectionLostException
          *             When IOIO connection is lost.
          *
-         * @see ioio.lib.util.IOIOLooper#setup()
+         * //@see ioio.lib.util.IOIOLooper#setup()
          */
 
     @Override
@@ -898,7 +922,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
      *
      * @see ioio.lib.util.AbstractIOIOActivity#createIOIOThread()
      */
-    @Override
+
     protected IOIOLooper createIOIOLooper() {
         return new Looper();
     }
