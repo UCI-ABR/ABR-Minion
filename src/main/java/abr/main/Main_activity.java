@@ -179,7 +179,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Long currTime;
 	
 	//pan/tilt
-	int panVal=1600;
+	int panVal=1500;
 	int tiltVal=1500;
 	boolean panningRight = false;
 	boolean tiltingUp = false;
@@ -191,7 +191,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	}
 
 	//choose robot//*************************************************************************change accordingly********************************************************
-	Robots minion = DOC;
+	Robots minion = CARLITO;
 
 
 	
@@ -332,7 +332,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	    mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 	    
 	    //set speeds. adjust accordingly for your robot
-	    if(redRobot){
+	    if(minion == CARLITO){
 	    	forwardSpeed = 120;//180;
 	    	turningSpeed = 100;//90;//80;//70;//100;
 	    	obstacleTurningSpeed = 100;//90;//75;//55;//50;//70;//100;
@@ -498,66 +498,80 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			//dest_loc = destinationCoords;
 			//autoMode = autoModefromM;
 			Log.i("hahaha","starting");
-			dest_loc = new Location(""); //calculate the center point of the field
+            Log.i("hahaha","destloc" + dest_loc);
 			dest_loc.setLatitude(-117.826558); //for testing
 			dest_loc.setLongitude(33.643253); // for testing
 
 			if(System.currentTimeMillis()-startTime > 9000000)
 				autoMode = false;
 			//did i do this right? ****************************************************************************************************
-			if((minion == DOC || minion == MR || minion == MRS)  && initialFieldScan == true) {
-				//if lidar is on pan/tilt
-				//if(curr_loc == topLeft || curr_loc == topRight || curr_loc == bottomLeft) {
-					Log.i("hahaha","lidar scan");
-					m_ioio_thread.set_speed(1500);
-					m_ioio_thread.set_steering(1500);
-					if (Index == 0 && panVal == 1400) {
-						panVal = 1500;
-						initialFieldScan = false;
-                        Log.i("hahaha","panVal" + panVal);
-                        Log.i("hahaha","fieldscan" + initialFieldScan);
-					}
-					else if (Index == 0 && panVal <= 1600) {
-						panVal--;
-						Log.i("hahaha","panVal" + panVal);
-						//pulseDistance = 3; how to call pulsedistance from lidar?
-						double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
-                        double [] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0],locationCoords[1],pulseDistance, heading);
-						Log.i("hahaha","lidar value" + pulseDistance);
-						Log.i("hahaha","lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
-						//send_to_M(minion, locationCoords, false, lgpsCoords);
-					}
+//			if((minion == DOC || minion == MR || minion == MRS)  && initialFieldScan == true) {
+//				//if lidar is on pan/tilt
+//				//if(curr_loc == topLeft || curr_loc == topRight || curr_loc == bottomLeft) {
+//					Log.i("hahaha","lidar scan");
+//					m_ioio_thread.set_speed(1500);
+//					m_ioio_thread.set_steering(1500);
+//					if (Index == 0 && panVal == 1400) {
+//						panVal = 1500;
+//						initialFieldScan = false;
+//                        Log.i("hahaha","panVal" + panVal);
+//                        Log.i("hahaha","fieldscan" + initialFieldScan);
+//					}
+//					else if (Index == 0 && panVal <= 1600) {
+//						panVal--;
+//						Log.i("hahaha","panVal" + panVal);
+//						//pulseDistance = 3; how to call pulsedistance from lidar?
+//						double[] locationCoords = {curr_loc.getLatitude(),curr_loc.getLongitude()};
+//                        double [] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0],locationCoords[1],pulseDistance, heading);
+//						Log.i("hahaha","lidar value" + pulseDistance);
+//						Log.i("hahaha","lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
+//						//send_to_M(minion, locationCoords, false, lgpsCoords);
+//					}
+//
+//					Index++;
+//					Index = Index % 15;
+//				}
+//			//}
 
-					Index++;
-					Index = Index % 15;
-				}
-			//}
-
-			else if ((minion == CARLITO) && initialFieldScan == true) {
+            if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && initialFieldScan == true) {
 					//or if moving whole robot
 				m_ioio_thread.set_speed(1500);
-				if(curr_loc == bottomRight)
-				{
-				    if (Index == 0 && wholeRobotScan == 11) {
+                Log.i("hahaha","lidar scan starting");
+				//if(curr_loc == bottomRight)
+				//{
+				    if (Index == 0 && wholeRobotScan == 10) {
+						m_ioio_thread.set_speed(1500);
                         m_ioio_thread.set_steering(1500);
                         initialFieldScan = false;
+                        Log.i("hahaha","steering 1500, scan over");
                     }
-				    else if(Index == 0) {
-                        m_ioio_thread.set_steering(1600);
-                        curr_loc.bearingTo(topRight);
+                    else if (Index != 0 ) {
+						m_ioio_thread.set_speed(1500);
+						m_ioio_thread.set_steering(1500);
+					}
+				    else if (Index == 0){
+						m_ioio_thread.set_speed(1500);
+                        m_ioio_thread.set_steeringSpeed(0.001f);
+						m_ioio_thread.set_steering(1600);
+                        //curr_loc.bearingTo(topRight);
                         double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
                         double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
                         //send_to_M(minion, locationCoords, false, lgpsCoords);
-                        wholeRobotScan++;
+						wholeRobotScan++;
+                        Log.i("hahaha","steering 1600");
+                        Log.i("hahaha","number of scans" + wholeRobotScan);
+                        Log.i("hahaha","lidar value" + pulseDistance);
+						Log.i("hahaha","lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
                     }
                     Index++;
-                    Index = Index % 15;
+				    Index = Index % 15;
 				}
-			}
+			//}
 
 
 			//scan(mRgba);
 			if(backCounter > 0){
+				Log.i("hahaha","backCounter");
 				m_ioio_thread.set_steering(1500);
 				m_ioio_thread.set_speed(1500-forwardSpeed/2);//m_ioio_thread.set_speed(1500-forwardSpeed);
 				panVal = 1500;
@@ -565,14 +579,18 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				backCounter--;
 				if (backCounter == 0)
 					pauseCounter = 5;
+
 			}
 			else if(backObstacleLeftCounter > 0){
+				Log.i("hahaha","backObstacleLeft");
 				panVal = 1500;
 				tiltVal = 1500;
 				if (backObstacleLeftCounter > 10) {
+					m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1500);
 				} else {
+					m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1600);
 				}
@@ -581,12 +599,15 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					pauseCounter = 5;
 			}
 			else if(backObstacleRightCounter > 0){
+				Log.i("hahaha","backObstacleRight");
 				panVal = 1500;
 				tiltVal = 1500;
 				if (backObstacleRightCounter > 10) {
+					m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1500);
 				} else {
+					m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1400);
 				}
@@ -595,6 +616,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					pauseCounter = 5;
 			}
 			else if(pauseCounter > 0){
+				Log.i("hahaha","pause");
 				m_ioio_thread.set_speed(1500);
 				m_ioio_thread.set_steering(1500);
 				pauseCounter--;

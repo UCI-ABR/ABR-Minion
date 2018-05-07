@@ -121,4 +121,5 @@ public class IOIO_thread_rover_4wd extends IOIO_thread
     public float get_ir3_reading() {
         return 100*((1f/15.7f*(-ir3_reading))+0.22f);
     }
+    public void set_steeringSpeed(float value) {speed_left = value; speed_right = value;}
 }
