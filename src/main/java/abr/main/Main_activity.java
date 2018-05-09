@@ -76,7 +76,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	String fromMaster = "", toMaster = "";
 
 	double[] lidarGPS = {0,0};
-	Location destinationCoords;
+	Location destinationCoords = {};
 	boolean autoModefromM = false;
 
 	//for both:
@@ -221,7 +221,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 
     int trigger_pin = 38;
-    int monitor_pin = 40;
+    int monitor_pin = 39;
     float pulseDistance;
 	
 	// called whenever the activity is created

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tracy\\Documents\\GitHub\\ABR-Minion\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Joseph\\Documents\\GitHub\\ABR-Minion\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Tracy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\5d4664d64b1ec4abd0a4e8f45cc34e28\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Joseph\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\084304c924307fd53c1e84571c595ff8\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
