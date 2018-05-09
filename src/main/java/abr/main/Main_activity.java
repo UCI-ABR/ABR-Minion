@@ -288,7 +288,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		centerLocation.setLongitude((bottomRight.getLongitude()+topLeft.getLongitude())/2);
 
         dest_loc = new Location(""); //calculate the center point of the field
-        dest_loc = topLeft;
+        dest_loc = bottomRight;
 
 		
 		//set up location listener
@@ -505,7 +505,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				if(curr_loc == dest_loc) {
 					curr_loc.bearingTo(bottomRight);
 					scanBearing = curr_loc.getBearing();
-					if (scanBearing == 12) {
+					if (scanBearing > 121 && scanBearing <= 123) {
 						scan = true;
 					}
 				}

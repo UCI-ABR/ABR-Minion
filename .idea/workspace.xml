@@ -12,6 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09c9c3ef-adc4-4170-bb57-1ea483a31d1a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$1.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$2.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$2.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$3.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$3.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$4.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$4.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$5.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$5.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$6.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$6.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$Looper.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$Looper.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$Robots.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity$Robots.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/abr/main/Main_activity.class" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$1.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$1.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$2.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$2.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$3.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$3.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$4.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$4.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$5.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$5.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$6.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$6.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$Looper.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$Looper.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$Robots.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity$Robots.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/24/abr/main/Main_activity.dex" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" />
+      <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/ABR-Minion-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/ABR-Minion-debug.apk" />
       <change beforePath="$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java" afterPath="$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,24 +67,24 @@
       <file leaf-file-name="Main_activity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-542">
-              <caret line="507" column="44" lean-forward="true" selection-start-line="507" selection-start-column="44" selection-end-line="507" selection-end-column="44" />
+            <state relative-caret-position="41">
+              <caret line="507" column="60" lean-forward="false" selection-start-line="507" selection-start-column="60" selection-end-line="507" selection-end-column="60" />
               <folding>
                 <element signature="e#7740#8050#0" expanded="true" />
                 <element signature="e#8049#8050#0" expanded="true" />
-                <element signature="e#9458#9485#0" expanded="true" />
-                <element signature="e#9571#9598#0" expanded="true" />
-                <element signature="e#9659#9686#0" expanded="true" />
-                <element signature="e#15885#15886#0" expanded="true" />
-                <element signature="e#15907#15908#0" expanded="true" />
-                <element signature="e#17959#18041#0" expanded="true" />
-                <element signature="e#18040#18041#0" expanded="true" />
-                <element signature="e#25706#25798#0" expanded="true" />
-                <element signature="e#25797#25798#0" expanded="true" />
-                <element signature="e#32152#32153#0" expanded="true" />
-                <element signature="e#32187#32188#0" expanded="true" />
-                <element signature="e#32889#33059#0" expanded="true" />
-                <element signature="e#33058#33059#0" expanded="true" />
+                <element signature="e#9462#9489#0" expanded="true" />
+                <element signature="e#9575#9602#0" expanded="true" />
+                <element signature="e#9663#9690#0" expanded="true" />
+                <element signature="e#15889#15890#0" expanded="true" />
+                <element signature="e#15911#15912#0" expanded="true" />
+                <element signature="e#17985#18067#0" expanded="true" />
+                <element signature="e#18066#18067#0" expanded="true" />
+                <element signature="e#25732#25824#0" expanded="true" />
+                <element signature="e#25823#25824#0" expanded="true" />
+                <element signature="e#32178#32179#0" expanded="true" />
+                <element signature="e#32213#32214#0" expanded="true" />
+                <element signature="e#32915#33085#0" expanded="true" />
+                <element signature="e#33084#33085#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,7 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>panVal</find>
       <find>forwardSpeed</find>
       <find>turningSpeed</find>
       <find>speed</find>
@@ -115,8 +143,9 @@
       <find>initial</find>
       <find>0.6f</find>
       <find>carlito</find>
-      <find>bearing</find>
       <find>heading</find>
+      <find>bearing</find>
+      <find>bearingTo</find>
     </findStrings>
     <replaceStrings>
       <replace>speedValue</replace>
@@ -1555,19 +1584,19 @@
           <folding>
             <element signature="e#7740#8050#0" expanded="true" />
             <element signature="e#8049#8050#0" expanded="true" />
-            <element signature="e#9458#9485#0" expanded="true" />
-            <element signature="e#9571#9598#0" expanded="true" />
-            <element signature="e#9659#9686#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15907#15908#0" expanded="true" />
-            <element signature="e#17959#18041#0" expanded="true" />
-            <element signature="e#18040#18041#0" expanded="true" />
-            <element signature="e#25706#25798#0" expanded="true" />
-            <element signature="e#25797#25798#0" expanded="true" />
-            <element signature="e#32152#32153#0" expanded="true" />
-            <element signature="e#32187#32188#0" expanded="true" />
-            <element signature="e#32889#33059#0" expanded="true" />
-            <element signature="e#33058#33059#0" expanded="true" />
+            <element signature="e#9462#9489#0" expanded="true" />
+            <element signature="e#9575#9602#0" expanded="true" />
+            <element signature="e#9663#9690#0" expanded="true" />
+            <element signature="e#15889#15890#0" expanded="true" />
+            <element signature="e#15911#15912#0" expanded="true" />
+            <element signature="e#17985#18067#0" expanded="true" />
+            <element signature="e#18066#18067#0" expanded="true" />
+            <element signature="e#25732#25824#0" expanded="true" />
+            <element signature="e#25823#25824#0" expanded="true" />
+            <element signature="e#32178#32179#0" expanded="true" />
+            <element signature="e#32213#32214#0" expanded="true" />
+            <element signature="e#32915#33085#0" expanded="true" />
+            <element signature="e#33084#33085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1579,19 +1608,19 @@
           <folding>
             <element signature="e#7740#8050#0" expanded="true" />
             <element signature="e#8049#8050#0" expanded="true" />
-            <element signature="e#9458#9485#0" expanded="true" />
-            <element signature="e#9571#9598#0" expanded="true" />
-            <element signature="e#9659#9686#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15907#15908#0" expanded="true" />
-            <element signature="e#17959#18041#0" expanded="true" />
-            <element signature="e#18040#18041#0" expanded="true" />
-            <element signature="e#25706#25798#0" expanded="true" />
-            <element signature="e#25797#25798#0" expanded="true" />
-            <element signature="e#32152#32153#0" expanded="true" />
-            <element signature="e#32187#32188#0" expanded="true" />
-            <element signature="e#32889#33059#0" expanded="true" />
-            <element signature="e#33058#33059#0" expanded="true" />
+            <element signature="e#9462#9489#0" expanded="true" />
+            <element signature="e#9575#9602#0" expanded="true" />
+            <element signature="e#9663#9690#0" expanded="true" />
+            <element signature="e#15889#15890#0" expanded="true" />
+            <element signature="e#15911#15912#0" expanded="true" />
+            <element signature="e#17985#18067#0" expanded="true" />
+            <element signature="e#18066#18067#0" expanded="true" />
+            <element signature="e#25732#25824#0" expanded="true" />
+            <element signature="e#25823#25824#0" expanded="true" />
+            <element signature="e#32178#32179#0" expanded="true" />
+            <element signature="e#32213#32214#0" expanded="true" />
+            <element signature="e#32915#33085#0" expanded="true" />
+            <element signature="e#33084#33085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1613,19 +1642,19 @@
           <folding>
             <element signature="e#7740#8050#0" expanded="true" />
             <element signature="e#8049#8050#0" expanded="true" />
-            <element signature="e#9458#9485#0" expanded="true" />
-            <element signature="e#9571#9598#0" expanded="true" />
-            <element signature="e#9659#9686#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15907#15908#0" expanded="true" />
-            <element signature="e#17959#18041#0" expanded="true" />
-            <element signature="e#18040#18041#0" expanded="true" />
-            <element signature="e#25706#25798#0" expanded="true" />
-            <element signature="e#25797#25798#0" expanded="true" />
-            <element signature="e#32152#32153#0" expanded="true" />
-            <element signature="e#32187#32188#0" expanded="true" />
-            <element signature="e#32889#33059#0" expanded="true" />
-            <element signature="e#33058#33059#0" expanded="true" />
+            <element signature="e#9462#9489#0" expanded="true" />
+            <element signature="e#9575#9602#0" expanded="true" />
+            <element signature="e#9663#9690#0" expanded="true" />
+            <element signature="e#15889#15890#0" expanded="true" />
+            <element signature="e#15911#15912#0" expanded="true" />
+            <element signature="e#17985#18067#0" expanded="true" />
+            <element signature="e#18066#18067#0" expanded="true" />
+            <element signature="e#25732#25824#0" expanded="true" />
+            <element signature="e#25823#25824#0" expanded="true" />
+            <element signature="e#32178#32179#0" expanded="true" />
+            <element signature="e#32213#32214#0" expanded="true" />
+            <element signature="e#32915#33085#0" expanded="true" />
+            <element signature="e#33084#33085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1647,19 +1676,19 @@
           <folding>
             <element signature="e#7740#8050#0" expanded="true" />
             <element signature="e#8049#8050#0" expanded="true" />
-            <element signature="e#9458#9485#0" expanded="true" />
-            <element signature="e#9571#9598#0" expanded="true" />
-            <element signature="e#9659#9686#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15907#15908#0" expanded="true" />
-            <element signature="e#17959#18041#0" expanded="true" />
-            <element signature="e#18040#18041#0" expanded="true" />
-            <element signature="e#25706#25798#0" expanded="true" />
-            <element signature="e#25797#25798#0" expanded="true" />
-            <element signature="e#32152#32153#0" expanded="true" />
-            <element signature="e#32187#32188#0" expanded="true" />
-            <element signature="e#32889#33059#0" expanded="true" />
-            <element signature="e#33058#33059#0" expanded="true" />
+            <element signature="e#9462#9489#0" expanded="true" />
+            <element signature="e#9575#9602#0" expanded="true" />
+            <element signature="e#9663#9690#0" expanded="true" />
+            <element signature="e#15889#15890#0" expanded="true" />
+            <element signature="e#15911#15912#0" expanded="true" />
+            <element signature="e#17985#18067#0" expanded="true" />
+            <element signature="e#18066#18067#0" expanded="true" />
+            <element signature="e#25732#25824#0" expanded="true" />
+            <element signature="e#25823#25824#0" expanded="true" />
+            <element signature="e#32178#32179#0" expanded="true" />
+            <element signature="e#32213#32214#0" expanded="true" />
+            <element signature="e#32915#33085#0" expanded="true" />
+            <element signature="e#33084#33085#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1706,24 +1735,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/abr/main/Main_activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-542">
-          <caret line="507" column="44" lean-forward="true" selection-start-line="507" selection-start-column="44" selection-end-line="507" selection-end-column="44" />
+        <state relative-caret-position="41">
+          <caret line="507" column="60" lean-forward="false" selection-start-line="507" selection-start-column="60" selection-end-line="507" selection-end-column="60" />
           <folding>
             <element signature="e#7740#8050#0" expanded="true" />
             <element signature="e#8049#8050#0" expanded="true" />
-            <element signature="e#9458#9485#0" expanded="true" />
-            <element signature="e#9571#9598#0" expanded="true" />
-            <element signature="e#9659#9686#0" expanded="true" />
-            <element signature="e#15885#15886#0" expanded="true" />
-            <element signature="e#15907#15908#0" expanded="true" />
-            <element signature="e#17959#18041#0" expanded="true" />
-            <element signature="e#18040#18041#0" expanded="true" />
-            <element signature="e#25706#25798#0" expanded="true" />
-            <element signature="e#25797#25798#0" expanded="true" />
-            <element signature="e#32152#32153#0" expanded="true" />
-            <element signature="e#32187#32188#0" expanded="true" />
-            <element signature="e#32889#33059#0" expanded="true" />
-            <element signature="e#33058#33059#0" expanded="true" />
+            <element signature="e#9462#9489#0" expanded="true" />
+            <element signature="e#9575#9602#0" expanded="true" />
+            <element signature="e#9663#9690#0" expanded="true" />
+            <element signature="e#15889#15890#0" expanded="true" />
+            <element signature="e#15911#15912#0" expanded="true" />
+            <element signature="e#17985#18067#0" expanded="true" />
+            <element signature="e#18066#18067#0" expanded="true" />
+            <element signature="e#25732#25824#0" expanded="true" />
+            <element signature="e#25823#25824#0" expanded="true" />
+            <element signature="e#32178#32179#0" expanded="true" />
+            <element signature="e#32213#32214#0" expanded="true" />
+            <element signature="e#32915#33085#0" expanded="true" />
+            <element signature="e#33084#33085#0" expanded="true" />
           </folding>
         </state>
       </provider>
