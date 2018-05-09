@@ -2,6 +2,7 @@ package abr.main;
 
 import ioio.lib.api.AnalogInput;
 import ioio.lib.api.DigitalOutput;
+import ioio.lib.api.PulseInput;
 import ioio.lib.api.PwmOutput;
 import ioio.lib.api.exception.ConnectionLostException;
 
@@ -14,12 +15,24 @@ public class IOIO_thread_rover_4wd extends IOIO_thread
     boolean direction_left, direction_right;
     float ir1_reading, ir2_reading, ir3_reading;
     private AnalogInput ir1, ir2, ir3;
+    private DigitalOutput trigger_port;
+    private PulseInput monitor_port;
+
+    float speedValue = .6f;
+
+    int trigger_pin = 38;
+    int monitor_pin = 39;
+    float pulseDistance;
 
     @Override
     public void setup() throws ConnectionLostException
     {
         try
         {
+
+            trigger_port = ioio_.openDigitalOutput(trigger_pin, false);
+            monitor_port = ioio_.openPulseInput(monitor_pin, PulseInput.PulseMode.POSITIVE);
+
             ir1 = ioio_.openAnalogInput(42);
             ir2 = ioio_.openAnalogInput(43);
             ir3 = ioio_.openAnalogInput(44);
@@ -49,12 +62,20 @@ public class IOIO_thread_rover_4wd extends IOIO_thread
 
         try
         {
+
+            pulseDistance = monitor_port.getDuration();
+            if(pulseDistance >= 0.04)
+            {
+                pulseDistance = -1;  //didn't find anything.
+            }
+
+
             ir1_reading = ir1.getVoltage();
             ir2_reading = ir2.getVoltage();
             ir3_reading = ir3.getVoltage();
             if(move_val > 1500){
-                speed_left = 0.6f;//0.8f;
-                speed_right = 0.6f;//0.8f;
+                speed_left = speedValue;//0.8f;
+                speed_right = speedValue;//0.8f;
                 if(turn_val > 1500){
                     direction_left = true;
                     direction_right = false;
@@ -121,5 +142,6 @@ public class IOIO_thread_rover_4wd extends IOIO_thread
     public float get_ir3_reading() {
         return 100*((1f/15.7f*(-ir3_reading))+0.22f);
     }
-    public void set_steeringSpeed(float value) {speed_left = value; speed_right = value;}
+    public void set_steeringSpeed(float value) {speedValue = value;}
+    public float get_pulseDistance() { return pulseDistance;}
 }
