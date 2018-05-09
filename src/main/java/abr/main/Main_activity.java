@@ -82,7 +82,6 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 	//for both:
 	boolean initialFieldScan = true,
-			isMannequinFound = false,
 			scanModefromM = true;
 
 	byte hex = (byte)0x90;
@@ -155,21 +154,11 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Location topRight;
 	Location coords;
 
-	//calculate corners function
-    int dy;
-    int dx;
-    int r_earth;
-    double latitude;
-    double longitude;
-    double new_latitude;
-    double new_longitude;
-
-
 	//lidar scan
 	int Index = 1;
 	int wholeRobotScan;
-	float lidarPulse;
-	boolean scan = true;
+	boolean scan = false;
+	float scanBearing;
 	
 	//timers
 	int pauseCounter = 0;
@@ -421,7 +410,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				  values[i] = degrees.floatValue();
 			  }
 			  pulseDistance=m_ioio_thread.get_pulseDistance();
-			  
+
 			  //Update the compass direction
 			  heading = values[0]+12;
 			  heading = (heading*5 + fixWraparound(values[0]+12))/6; //add 12 to make up for declination in Irvine, average out from previous 2 for smoothness
@@ -513,7 +502,14 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && initialFieldScan == true) {
 				Log.i("hahaha", "lidar scan starting");
-					if (scan) {
+				if(curr_loc == dest_loc) {
+					curr_loc.bearingTo(bottomRight);
+					scanBearing = curr_loc.getBearing();
+					if (scanBearing == 12) {
+						scan = true;
+					}
+				}
+				if (scan) {
 						m_ioio_thread.set_speed(1600);
 						m_ioio_thread.set_steeringSpeed(0.25f);
 						m_ioio_thread.set_steering(1600);
@@ -525,17 +521,34 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 								scan = false;
 							}
 						}, 10000);
-						// wholeRobotScan++;
 						Log.i("hahaha", "steering 1600");
 						Log.i("hahaha", "number of scans" + wholeRobotScan);
 						Log.i("hahaha", "lidar value" + pulseDistance);
 						Log.i("hahaha", "lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
-					} else {
+				}
+				else if (curr_loc == dest_loc && !scan) {
 						m_ioio_thread.set_speed(1500);
 						m_ioio_thread.set_steering(1500);
 						initialFieldScan = false;
 						Log.i("hahaha", "steering 1500, scan over");
+				}
+				else if(curr_loc != dest_loc) {
+					float bearingMod = bearing % 360;
+					float headingMod = heading % 360;
+
+					m_ioio_thread.set_speed(1500 + forwardSpeed);
+					if (bearingMod >= headingMod) {
+						if (bearingMod - headingMod <= 180)
+							m_ioio_thread.set_steering(1500 + turningSpeed);
+						else
+							m_ioio_thread.set_steering(1500 - turningSpeed);
+					} else {
+						if (headingMod - bearingMod <= 180)
+							m_ioio_thread.set_steering(1500 - turningSpeed);
+						else
+							m_ioio_thread.set_steering(1500 + turningSpeed);
 					}
+				}
 			}
 
 
@@ -647,7 +660,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				float bearingMod = bearing % 360;
 				float headingMod = heading % 360;
 
-				//m_ioio_thread.set_speed(1500 + forwardSpeed);
+				m_ioio_thread.set_speed(1500 + forwardSpeed);
 				if (bearingMod >= headingMod) {
 					if (bearingMod - headingMod <= 180)
 						m_ioio_thread.set_steering(1500 + turningSpeed);
