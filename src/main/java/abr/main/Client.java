@@ -16,7 +16,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
     public String response="";
     TextView textResponse;
 
-    Client(String addr, int port,TextView textResponse) {
+    Client(String addr, int port, TextView textResponse) {
         dstAddress = addr;
         dstPort = port;
         this.textResponse=textResponse;
@@ -74,4 +74,9 @@ public class Client extends AsyncTask<Void, Void, Void> {
         textResponse.setText(response);
         super.onPostExecute(result);
     }
+
+    public String getResponse() {
+        return response;
+    }
+
 }
