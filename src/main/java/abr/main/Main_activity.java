@@ -81,12 +81,10 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 
 	double[] lidarGPS = {0,0};
-<<<<<<< HEAD
-	Location destinationCoords = {};
-	boolean autoModefromM = false;
-=======
 	Location destinationCoords;
->>>>>>> 3737f317fc0bfb7a95cd98b044c21add5481547c
+	boolean autoModefromM = false;
+
+
 
 	//for both:
 	boolean initialFieldScan = true;
@@ -499,14 +497,19 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				70 + mSpectrum.cols());
 		mSpectrum.copyTo(spectrumLabel);
 
-		mClient = new Client(phoneIp,8080, response);
-		mClient.execute();
+		//mClient = new Client(phoneIp,8080, response);
+		//mClient.execute();
 		mainResponse = mClient.response;
+
 		Log.i("hahaha", "MAINRESPONSE" + mainResponse);
+		Log.i("hahaha", "MINION" + curr_loc);
+
 
 		if(!mainResponse.isEmpty()) {
 			receive_from_M(mainResponse);
-
+			if (autoMode) {
+				startTime = System.currentTimeMillis();
+			}
 		}
 
 		Log.i("hahaha", "autoMOde" + autoMode);
@@ -640,7 +643,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						Log.v("app.main", "pause == 0");
 						m_ioio_thread.set_speed(1500 + forwardSpeed);
 						m_ioio_thread.set_steering(1500);
-						//dest_loc = destinationCoords;
+						dest_loc = destinationCoords;
 
 					}
 				}

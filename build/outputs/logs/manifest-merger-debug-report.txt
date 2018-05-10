@@ -1,274 +1,274 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\63102aaa41bdf2ea221f1ca1f0f433e9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\5ccf3fd10050c7cf45dc19c844ef0ba3\AndroidManifest.xml:2:1-9:12
-MERGED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\2426b5ef62e5e4be35d950e64c59b2f9\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\ba643d2274ac902a3f953766f1e3775f\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\db518d009e5e144698d3542eb5e7d72d\AndroidManifest.xml:2:1-9:12
-MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:2:1-17:12
-MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\43e7f9cb11ac7ad9144aefafee0b7902\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\40a109dd7b0dd30add8d17bbad440029\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.0.aar\c2774a8170e098ac2ef74770125c77fe\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.0.aar\7214e35cad06fee5f591dd73b54d19b3\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\02c80af4774169784503b6eb47861192\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\24f6c26151c582db473b9fb65e4c2c58\AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\d7061da5f6ffbdac1338affc02571da2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\8fc93b58969df68c1dc92bb473705674\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\0c8bba630952e241a8421e4220d6d2e0\AndroidManifest.xml:2:1-9:12
+MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\fa6f697d6dd8a1bf807335e93adc26d4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\f8da2fec4a845de3fb29fa3b1f9795da\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\a9a8489fbd92c8f87656cd4d39c5eee8\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\9901cbab64b7a4d610e645ebe8304656\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12
 	package
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:5:2-20
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:5:2-20
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:4:2-27
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:4:2-27
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:3:2-25
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:3:2-25
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:7:2-65
-MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\5ccf3fd10050c7cf45dc19c844ef0ba3\AndroidManifest.xml:7:5-68
-MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\5ccf3fd10050c7cf45dc19c844ef0ba3\AndroidManifest.xml:7:5-68
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:7:2-65
+MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\24f6c26151c582db473b9fb65e4c2c58\AndroidManifest.xml:7:5-68
+MERGED from [com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidBluetooth-5.05.aar\24f6c26151c582db473b9fb65e4c2c58\AndroidManifest.xml:7:5-68
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:7:19-62
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:7:19-62
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:8:2-64
-MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\db518d009e5e144698d3542eb5e7d72d\AndroidManifest.xml:7:5-67
-MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\db518d009e5e144698d3542eb5e7d72d\AndroidManifest.xml:7:5-67
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:8:2-64
+MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\0c8bba630952e241a8421e4220d6d2e0\AndroidManifest.xml:7:5-67
+MERGED from [com.github.ytai.ioio:IOIOLibAndroid:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroid-5.05.aar\0c8bba630952e241a8421e4220d6d2e0\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:8:19-61
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:8:19-61
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:9:2-61
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:9:2-61
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:9:19-59
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:9:19-59
 uses-feature#android.hardware.camera
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:10:2-56
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:10:2-56
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:10:16-54
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:10:16-54
 uses-feature#android.hardware.camera.autofocus
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:11:2-66
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:11:2-66
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:11:16-64
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:11:16-64
 uses-feature#android.hardware.camera.front
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:12:2-62
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:12:2-62
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:12:16-60
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:12:16-60
 uses-feature#android.hardware.camera.front.autofocus
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:13:2-72
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:13:2-72
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:13:16-70
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:13:16-70
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:14:2-76
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:14:2-76
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:14:19-73
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:14:19-73
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:15:2-78
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:15:2-78
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:15:19-75
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:15:19-75
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:16:2-77
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:16:2-77
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:16:19-75
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:16:19-75
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:17:2-76
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:17:2-76
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:17:19-74
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:17:19-74
 uses-permission#android.permission.WRITE_INTERNAL_STORAGE
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:18:2-77
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:18:2-77
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:18:19-75
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:18:19-75
 uses-permission#android.permission.READ_INTERNAL_STORAGE
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:19:2-76
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:19:2-76
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:19:19-74
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:19:19-74
 uses-sdk
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:2-71
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\63102aaa41bdf2ea221f1ca1f0f433e9\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\63102aaa41bdf2ea221f1ca1f0f433e9\AndroidManifest.xml:20:5-43
-MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:7:5-9:41
-MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\43e7f9cb11ac7ad9144aefafee0b7902\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\43e7f9cb11ac7ad9144aefafee0b7902\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\40a109dd7b0dd30add8d17bbad440029\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\40a109dd7b0dd30add8d17bbad440029\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.0.aar\c2774a8170e098ac2ef74770125c77fe\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.0.aar\c2774a8170e098ac2ef74770125c77fe\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.0.aar\7214e35cad06fee5f591dd73b54d19b3\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.0.aar\7214e35cad06fee5f591dd73b54d19b3\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:20:5-22:41
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:2-71
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\02c80af4774169784503b6eb47861192\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\02c80af4774169784503b6eb47861192\AndroidManifest.xml:20:5-43
+MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:7:5-9:41
+MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\fa6f697d6dd8a1bf807335e93adc26d4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\fa6f697d6dd8a1bf807335e93adc26d4\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\f8da2fec4a845de3fb29fa3b1f9795da\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\f8da2fec4a845de3fb29fa3b1f9795da\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\a9a8489fbd92c8f87656cd4d39c5eee8\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\a9a8489fbd92c8f87656cd4d39c5eee8\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\9901cbab64b7a4d610e645ebe8304656\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\9901cbab64b7a4d610e645ebe8304656\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:12-41
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:12-41
 	android:minSdkVersion
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:42-68
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:22:42-68
 application
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:23:2-48:16
-MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:11:5-15:19
-MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:11:5-15:19
-MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\43e7f9cb11ac7ad9144aefafee0b7902\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\43e7f9cb11ac7ad9144aefafee0b7902\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\40a109dd7b0dd30add8d17bbad440029\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\40a109dd7b0dd30add8d17bbad440029\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.0.aar\c2774a8170e098ac2ef74770125c77fe\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.0.aar\c2774a8170e098ac2ef74770125c77fe\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.0.aar\7214e35cad06fee5f591dd73b54d19b3\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.0.aar\7214e35cad06fee5f591dd73b54d19b3\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:24:5-28:19
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:23:2-48:16
+MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:11:5-15:19
+MERGED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:11:5-15:19
+MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\fa6f697d6dd8a1bf807335e93adc26d4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-location-15.0.0.aar\fa6f697d6dd8a1bf807335e93adc26d4\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\f8da2fec4a845de3fb29fa3b1f9795da\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\f8da2fec4a845de3fb29fa3b1f9795da\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\a9a8489fbd92c8f87656cd4d39c5eee8\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-15.0.1.aar\a9a8489fbd92c8f87656cd4d39c5eee8\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\9901cbab64b7a4d610e645ebe8304656\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\9901cbab64b7a4d610e645ebe8304656\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:14:9-35
+		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:13:9-41
+		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:13:9-41
 	android:allowBackup
-		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\6b729085369c64c5cecd1fec756d4ef2\AndroidManifest.xml:12:9-35
+		ADDED from [org.opencv:OpenCV-Android:3.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\OpenCV-Android-3.1.0.aar\ac508563f00481fe0f7438ea15c68449\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:24:3-39
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:24:3-39
 uses-library#com.android.future.usb.accessory
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:25:3-26:31
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:25:3-26:31
 	android:required
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:26:4-28
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:26:4-28
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:25:17-64
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:25:17-64
 activity#abr.main.Main_activity
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:27:3-47:14
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:27:3-47:14
 	android:screenOrientation
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:31:4-41
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:31:4-41
 	android:label
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:28:4-36
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:28:4-36
 	android:launchMode
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:30:4-35
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:30:4-35
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:29:4-41
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:29:4-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:32:4-35:20
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:32:4-35:20
 action#android.intent.action.MAIN
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:33:5-57
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:33:5-57
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:33:13-54
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:33:13-54
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:34:5-65
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:34:5-65
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:34:15-62
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:34:15-62
 intent-filter#action:name:android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:36:4-38:20
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:36:4-38:20
 action#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:37:5-81
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:37:5-81
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:37:13-78
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:37:13-78
 intent-filter#action:name:android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:39:4-41:20
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:39:4-41:20
 action#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:40:5-78
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:40:5-78
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:40:13-75
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:40:13-75
 meta-data#android.hardware.usb.action.USB_ACCESSORY_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:42:4-43:48
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:42:4-43:48
 	android:resource
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:43:5-45
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:43:5-45
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:42:15-80
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:42:15-80
 meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:44:4-45:45
+ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:44:4-45:45
 	android:resource
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:45:5-42
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:45:5-42
 	android:name
-		ADDED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:44:15-77
+		ADDED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:44:15-77
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from C:\Users\Joseph\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12 reason: ioio.lib.bluetooth has a targetSdkVersion < 4
+IMPLIED from C:\Users\Tracy\Documents\GitHub\ABR-Minion\src\main\AndroidManifest.xml:2:1-49:12 reason: ioio.lib.bluetooth has a targetSdkVersion < 4
 uses-feature#android.hardware.usb.accessory
-ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\2426b5ef62e5e4be35d950e64c59b2f9\AndroidManifest.xml:7:5-9:36
+ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\d7061da5f6ffbdac1338affc02571da2\AndroidManifest.xml:7:5-9:36
 	android:required
-		ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\2426b5ef62e5e4be35d950e64c59b2f9\AndroidManifest.xml:9:9-33
+		ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\d7061da5f6ffbdac1338affc02571da2\AndroidManifest.xml:9:9-33
 	android:name
-		ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\2426b5ef62e5e4be35d950e64c59b2f9\AndroidManifest.xml:8:9-54
+		ADDED from [com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidAccessory-5.05.aar\d7061da5f6ffbdac1338affc02571da2\AndroidManifest.xml:8:9-54
 uses-feature#android.hardware.usb.host
-ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\ba643d2274ac902a3f953766f1e3775f\AndroidManifest.xml:7:5-9:36
+ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\8fc93b58969df68c1dc92bb473705674\AndroidManifest.xml:7:5-9:36
 	android:required
-		ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\ba643d2274ac902a3f953766f1e3775f\AndroidManifest.xml:9:9-33
+		ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\8fc93b58969df68c1dc92bb473705674\AndroidManifest.xml:9:9-33
 	android:name
-		ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\ba643d2274ac902a3f953766f1e3775f\AndroidManifest.xml:8:9-49
+		ADDED from [com.github.ytai.ioio:IOIOLibAndroidDevice:5.05] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\IOIOLibAndroidDevice-5.05.aar\8fc93b58969df68c1dc92bb473705674\AndroidManifest.xml:8:9-49
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.0.aar\5d24fcd887f28477a64722a0059042da\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\e04d11d0550d18964a40e210f561ddf1\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:15.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.0.aar\178159129bfca66e87d16e9f24fc5fc9\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\e2afc90ae4addc0ca376573eb4c9d2fd\AndroidManifest.xml:24:13-58
 meta-data#android.support.VERSION
-ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\084304c924307fd53c1e84571c595ff8\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\92f2cc85cdfce9b98ce179ff65e031b9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\961ed05473088bb4faf3e0ec7dd650af\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\c9f67a4101fcfb59bc260a476c66df09\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\87d71ea1849557c73822894f59e67606\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\81f3e147c2cfc5e5c66338b06a6b1150\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\45305b58310b1f484b0fa57eda76034c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\58ae4509e3a65ae6b791583db5967deb\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\876a1ff0e3df16b20ed25ff3be5db363\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f584847154c76f6f9ddd5060c5f047da\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\b8f1b1a5ea358bfe09ceea074b2a10e3\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\f883e5edea036604c895b05da4d428b6\AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Joseph\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\8b9271f46e807b899b3e1ec830360a67\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Tracy\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\fc657905c784e649d2e82a4aa580e611\AndroidManifest.xml:26:13-58
