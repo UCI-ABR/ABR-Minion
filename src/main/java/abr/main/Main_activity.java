@@ -87,7 +87,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 
 	//for both:
-	boolean initialFieldScan = true;
+	boolean isFieldScanComplete = false;
 
 
 	byte hex = (byte)0x90;
@@ -504,7 +504,6 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		Log.i("hahaha", "MAINRESPONSE" + mainResponse);
 		Log.i("hahaha", "MINION" + curr_loc);
 
-
 		if(!mainResponse.isEmpty()) {
 			receive_from_M(mainResponse);
 			if (autoMode) {
@@ -517,13 +516,20 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		if (autoMode && (System.currentTimeMillis()-startTime < 900000)) { // only move if autoMode is on and time under time limit
 
 			Log.i("hahaha", "starting");
-			Log.i("hahaha", "autoMode" + autoMode);
-			Log.i("hahaha", "destloc" + dest_loc);
+			mHandler.postDelayed(new Runnable() {
+				public void run() {
+					double[] locationCoordsTest = {dest_loc.getLatitude(), dest_loc.getLongitude()};
+					double[] notUsedTest = {0, 0};
+					send_to_M(minion, locationCoordsTest, false,false, notUsedTest );
+					Log.i("hahaha", "hi");
+				}
+			}, 10000);
+
 
 			if (System.currentTimeMillis() - startTime > 9000000)
 				autoMode = false;
 
-			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && initialFieldScan == true) {
+			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && !isFieldScanComplete) {
 				Log.i("hahaha", "lidar scan starting");
 				if(curr_loc == dest_loc) {
 					curr_loc.bearingTo(bottomRight);
@@ -538,7 +544,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						m_ioio_thread.set_steering(1600);
 						double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 						double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
-						send_to_M(minion, locationCoords, false, lgpsCoords);
+						send_to_M(minion, locationCoords, true,false, lgpsCoords);
 						mHandler.postDelayed(new Runnable() {
 							public void run() {
 								scan = false;
@@ -552,7 +558,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				else if (curr_loc == dest_loc && !scan) {
 						m_ioio_thread.set_speed(1500);
 						m_ioio_thread.set_steering(1500);
-						initialFieldScan = false;
+						isFieldScanComplete = true;
 						Log.i("hahaha", "steering 1500, scan over");
 				}
 				else if(curr_loc != dest_loc) {
@@ -636,7 +642,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 							Log.v("app.main", "obstacle reached");
 							double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 							double[] notUsed = {0, 0};
-							send_to_M(minion, locationCoords, true, notUsed);
+							send_to_M(minion, locationCoords, false, true, notUsed);
 
 						}
 					} else {
@@ -657,7 +663,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					//backCounter = 5;
 					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 					double[] notUsed = {0, 0};
-					send_to_M(minion, locationCoords, true, notUsed);
+					send_to_M(minion, locationCoords, false,true, notUsed);
 					if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
 						Log.v("app.main", "bucket on left");
 						backObstacleLeftCounter = 18;
@@ -771,13 +777,15 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	}
 
 	// sends minion's data to master
-	void send_to_M (Robots name, double[] location, Boolean foundMann, double[] lgps) {
-
+	void send_to_M (Robots name, double[] location, Boolean scanMode, Boolean foundMann, double[] lgps) {
+		toMaster = "";
 		// Add robot name
 		toMaster = toMaster + "NAME: " + name;
 
 		//REPLACE ## later w/ curr_loc.getLatitude & curr_loc.getLongitude
 		toMaster = toMaster + "GPS[LAT:" + location[0] + ", LON:" + location[1] + "], ";
+
+		toMaster = toMaster + "SCAN: " + scanMode;
 
 		// Add mannequin status
 		toMaster = toMaster + "MAN: " + foundMann;
@@ -785,7 +793,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		// Add GPS coordinates of victim seen by LIDAR
 		toMaster = toMaster + "LGPS[LAT:" + lgps[0] + ", LON:" + lgps[1] + "], ";
 
-		server.msgReply = toMaster;
+		server.msgReply123 = toMaster;
 	}
 
 

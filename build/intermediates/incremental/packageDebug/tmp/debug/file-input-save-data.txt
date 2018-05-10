@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 09 18:05:58 PDT 2018
+#Wed May 09 20:29:18 PDT 2018
 4.path=lib/armeabi-v7a/libopencv_java3.so
 8.set=NATIVE_RESOURCE
 6.path=lib/x86_64/libopencv_java3.so

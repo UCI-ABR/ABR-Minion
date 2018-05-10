@@ -21,8 +21,8 @@ import java.util.Enumeration;
 public class Server {
     Main_activity activity;
     ServerSocket serverSocket;
-    String msgReply = "";
-    public String message = "";
+    String msgReply123 = "";
+    String message = "";
     static final int socketServerPORT = 8080;
 
     public Server(Main_activity activity, String msg) {
@@ -96,7 +96,7 @@ public class Server {
         @Override
         public void run() {
             OutputStream outputStream;
-            msgReply = "HELLO FROM MASTER";
+            String msgReply = msgReply123; //= "HELLO FROM MASTER";
             //"Hello from Master,send me your info, you are #" + cnt +"\n"; ////////////////////////////////////////////////////////////////
 
             try {
