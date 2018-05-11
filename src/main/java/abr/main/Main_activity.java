@@ -74,7 +74,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Server server;
 	TextView msg;
 	Client mClient;
-	String phoneIp = "169.234." + "69.65";
+	String phoneIp = "169.234." + "78.165";
 
 	//for Minion:
 	String fromMaster = "", toMaster = "";
@@ -96,10 +96,10 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	int forwardSpeed;
 	int turningSpeed;
 	int obstacleTurningSpeed;
-	
+
 	// ioio variables
 	IOIO_thread_rover_4wd m_ioio_thread;
-	
+
 	//blob detection variables
 	private CameraBridgeViewBase mOpenCvCameraView;
 	private Mat mRgba;
@@ -107,11 +107,11 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	private ColorBlobDetector mDetector;
 	private Mat mSpectrum;
 	private Scalar CONTOUR_COLOR;
-	
+
 	//app state variables
 	boolean autoMode;
 	boolean scanMode;
-	
+
 	//variables for logging
 	private Sensor mGyroscope;
 	private Sensor mGravityS;
@@ -127,7 +127,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	private LocationListener mLocationListener;
 	Location dest_loc;
 	float distance = 0;
-	
+
 	//variables for compass
 	private SensorManager mSensorManager;
 	private Sensor mCompass, mAccelerometer;
@@ -143,7 +143,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	TextView distanceText;
 	TextView bearingText;
 	TextView headingText;
-	
+
 	//sockets for message passing
 	Boolean isClient = true;
 	ServerSocket serverSocket;
@@ -151,7 +151,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Socket clientSocket;
 	DataInputStream dataInputStream;
 	DataOutputStream dataOutputStream;
-	
+
 	//occupancy grid variables
 	Location centerLocation;
 	Location topLeft;
@@ -165,7 +165,8 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	int wholeRobotScan;
 	boolean scan = false;
 	float scanBearing;
-	
+	boolean reached = false;
+
 	//timers
 	int pauseCounter = 0;
 	int backCounter = 0;
@@ -173,7 +174,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	int backObstacleRightCounter = 0;
 	Long startTime;
 	Long currTime;
-	
+
 	//pan/tilt
 	int panVal=1500;
 	int tiltVal=1500;
@@ -190,7 +191,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Robots minion = CARLITO;
 
 
-	
+
 	// called to use OpenCV libraries contained within the app as opposed to a separate download
 	static {
 		if (!OpenCVLoader.initDebug()) {
@@ -219,6 +220,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
     private DigitalOutput trigger_port;
     private PulseInput monitor_port;
 
+	boolean alreadySet = false;
 
     int trigger_pin = 38;
     int monitor_pin = 39;
@@ -226,15 +228,15 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
     private Handler mHandler = new Handler();
 
-	
+
 	// called whenever the activity is created
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.main);
-		
+
 		helper_.create(); // from IOIOActivity
 
 		response = (TextView) findViewById(R.id.textResponse);
@@ -243,7 +245,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		server = new Server(this, "HI");
 		mClient = new Client(phoneIp,8080, response);
 		mClient.execute();
-		
+
 		//set up opencv camera
 		mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.color_blob_detection_activity_surface_view);
 		mOpenCvCameraView.setCvCameraViewListener(this);
@@ -256,7 +258,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		distanceText = (TextView) findViewById(R.id.distanceText);
 		bearingText = (TextView) findViewById(R.id.bearingText);
 		headingText = (TextView) findViewById(R.id.headingText);
-		
+
 		//add functionality to autoMode button
 //		Button buttonAuto = (Button) findViewById(R.id.btnAuto);
 //		buttonAuto.setOnClickListener(new OnClickListener() {
@@ -283,17 +285,17 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 		//find 4 corners**********************************************************************************
 		topLeft = new Location("");
-		topLeft.setLongitude(-117.8244058);
-		topLeft.setLatitude(33.6424658);
+		topLeft.setLongitude(-117.8393132);
+		topLeft.setLatitude(33.6434174);
 		bottomRight = new Location("");
-		bottomRight.setLongitude(-117.8279541);
-		bottomRight.setLatitude(33.6415701);
+		bottomRight.setLongitude(-117.8406020);
+		bottomRight.setLatitude(33.6434542);
 		topRight = new Location("");
-		topRight.setLongitude(-117.8254757);
-		topRight.setLatitude(33.6406242);
+		topRight.setLongitude(-117.8401173);
+		topRight.setLatitude(33.6428605);
 		bottomLeft = new Location("");
-		bottomLeft.setLongitude(-117.8264017);
-		bottomLeft.setLatitude(33.6435566);
+		bottomLeft.setLongitude(-117.8400324);
+		bottomLeft.setLatitude(33.6439039);
 		centerLocation = new Location(""); //calculate the center point of the field
 		centerLocation.setLatitude((bottomRight.getLatitude()+topLeft.getLatitude())/2);
 		centerLocation.setLongitude((bottomRight.getLongitude()+topLeft.getLongitude())/2);
@@ -301,7 +303,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
         dest_loc = new Location(""); //calculate the center point of the field
         //dest_loc = bottomRight;
 
-		
+
 		//set up location listener
 		mLocationListener = new LocationListener() {
 			public void onLocationChanged(Location location) {
@@ -319,7 +321,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			public void onProviderDisabled(String provider) {
 			}
 		};
-		
+
 		//set up compass
 		mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 	    mCompass= mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
@@ -334,7 +336,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	    mLocationRequest.setInterval(2000);
 	    mLocationRequest.setFastestInterval(500);
 	    mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-	    
+
 	    //set speeds. adjust accordingly for your robot
 	    if(redRobot){
 	    	forwardSpeed = 120;//180;
@@ -384,7 +386,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	public final void onAccuracyChanged(Sensor sensor, int accuracy) {
 		// Do something here if sensor accuracy changes.
 	}
-    
+
     //Called whenever the value of a sensor changes
 	@Override
 	public final void onSensorChanged(SensorEvent event)  {
@@ -396,7 +398,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			  setText("bearing: "+bearing, bearingText);
 			  setText("heading: "+heading, headingText);
 		  }
-		 
+
 		  if (event.sensor.getType() == Sensor.TYPE_GRAVITY)
 			  mGravity = event.values;
 		  if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE)
@@ -428,7 +430,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		   }
 	  }
 
-	
+
 	//Called whenever activity resumes from pause
 	@Override
 	public void onResume() {
@@ -443,7 +445,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	        startLocationUpdates();
 	    }
 	}
-	
+
 	//Called when activity pauses
 	@Override
 	public void onPause() {
@@ -453,11 +455,11 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		mSensorManager.unregisterListener(this);
 		stopLocationUpdates();
 	}
-	
+
 	protected void stopLocationUpdates() {
 	    LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, mLocationListener);
 	}
-	
+
 	//Called when activity restarts. onCreate() will then be called
 	@Override
 	public void onRestart() {
@@ -482,10 +484,10 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	//Called at every camera frame. Main controls of the robot movements are in this function
 	public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
 		Log.i("hahaha","area:"+(mDetector.getMaxArea()/(mDetector.getCenterX()*mDetector.getCenterY()*4)) );
-		
+
 		mRgba = inputFrame.rgba();
 		mDetector.process(mRgba);
-		
+
 		List<MatOfPoint> contours = mDetector.getContours();
 		// Log.e("rescue robotics", "Contours count: " + contours.size());
 		Imgproc.drawContours(mRgba, contours, -1, CONTOUR_COLOR);
@@ -506,24 +508,24 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 		if(!mainResponse.isEmpty()) {
 			receive_from_M(mainResponse);
-			if (autoMode) {
+			if (autoMode && !alreadySet) {
 				startTime = System.currentTimeMillis();
+				alreadySet = true;
 			}
 		}
 
-		Log.i("hahaha", "autoMOde" + autoMode);
 		// majority of control exists here
 		if (autoMode && (System.currentTimeMillis()-startTime < 900000)) { // only move if autoMode is on and time under time limit
 
 			Log.i("hahaha", "starting");
-			mHandler.postDelayed(new Runnable() {
-				public void run() {
-					double[] locationCoordsTest = {dest_loc.getLatitude(), dest_loc.getLongitude()};
-					double[] notUsedTest = {0, 0};
-					send_to_M(minion, locationCoordsTest, false,false, notUsedTest );
-					Log.i("hahaha", "hi");
-				}
-			}, 10000);
+//			mHandler.postDelayed(new Runnable() {
+//				public void run() {
+//					double[] locationCoordsTest = {dest_loc.getLatitude(), dest_loc.getLongitude()};
+//					double[] notUsedTest = {0, 0};
+//					send_to_M(minion, locationCoordsTest, false,false, notUsedTest );
+//					Log.i("hahaha", "hi");
+//				}
+//			}, 10000);
 
 
 			if (System.currentTimeMillis() - startTime > 9000000)
@@ -531,20 +533,44 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 
 			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && !isFieldScanComplete) {
 				Log.i("hahaha", "lidar scan starting");
-				if(curr_loc == dest_loc) {
-					curr_loc.bearingTo(bottomRight);
-					scanBearing = curr_loc.getBearing();
-					if (scanBearing > 121 && scanBearing <= 123) {
-						scan = true;
-					}
+				if((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime <= 80000){
+					Log.i("hahaha", "80secondsStraight");
+					m_ioio_thread.set_speed(1500+forwardSpeed);
 				}
+				else if ((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime > 80000) {
+					Log.i("hahaha", "80secondsStop");
+					m_ioio_thread.set_speed(1500);
+					scan = true;
+					reached = true;
+					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+					double[] notUsed = {0, 0};
+					send_to_M(minion, locationCoords, true, true, false, notUsed);
+				}
+				else if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime <= 5000){
+					Log.i("hahaha", "5secondsStraight");
+					m_ioio_thread.set_speed(1500+forwardSpeed);
+				}
+				else if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime > 5000) {
+					Log.i("hahaha", "5secondsStop");
+					m_ioio_thread.set_speed(1500);
+					//scan = true;
+					reached = true;
+					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+					double[] notUsed = {0, 0};
+					send_to_M(minion, locationCoords, true, true, false, notUsed);
+				}
+			}
+
+
+
 				if (scan) {
+					Log.i("hahaha", "scan");
 						m_ioio_thread.set_speed(1600);
-						m_ioio_thread.set_steeringSpeed(0.25f);
+						//m_ioio_thread.set_steeringSpeed(0.25f);
 						m_ioio_thread.set_steering(1600);
 						double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 						double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
-						send_to_M(minion, locationCoords, true,false, lgpsCoords);
+						send_to_M(minion, locationCoords, true, true,false, lgpsCoords);
 						mHandler.postDelayed(new Runnable() {
 							public void run() {
 								scan = false;
@@ -561,7 +587,8 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						isFieldScanComplete = true;
 						Log.i("hahaha", "steering 1500, scan over");
 				}
-				else if(curr_loc != dest_loc) {
+				else if(curr_loc != dest_loc && (System.currentTimeMillis() - startTime) > 80000) {
+					Log.i("hahaha", "moving");
 					float bearingMod = bearing % 360;
 					float headingMod = heading % 360;
 
@@ -578,7 +605,6 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 							m_ioio_thread.set_steering(1500 + turningSpeed);
 					}
 				}
-			}
 
 
 
@@ -586,7 +612,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			if (backCounter > 0 ) {
 				Log.i("hahaha", "backCounter");
 				m_ioio_thread.set_steering(1500);
-				m_ioio_thread.set_speed(1500 - forwardSpeed / 2);//m_ioio_thread.set_speed(1500-forwardSpeed);
+				m_ioio_thread.set_speed(1500 - forwardSpeed / 2);//m_ioio_thread.move(1500-forwardSpeed);
 				panVal = 1500;
 				tiltVal = 1500;
 				backCounter--;
@@ -598,11 +624,11 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				panVal = 1500;
 				tiltVal = 1500;
 				if (backObstacleLeftCounter > 10) {
-					m_ioio_thread.set_steeringSpeed(0.6f);
+					//m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1500);
 				} else {
-					m_ioio_thread.set_steeringSpeed(0.6f);
+					//m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1600);
 				}
@@ -614,11 +640,11 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 				panVal = 1500;
 				tiltVal = 1500;
 				if (backObstacleRightCounter > 10) {
-					m_ioio_thread.set_steeringSpeed(0.6f);
+					//m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1500);
 				} else {
-					m_ioio_thread.set_steeringSpeed(0.6f);
+					//m_ioio_thread.set_steeringSpeed(0.6f);
 					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
 					m_ioio_thread.set_steering(1400);
 				}
@@ -642,14 +668,14 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 							Log.v("app.main", "obstacle reached");
 							double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 							double[] notUsed = {0, 0};
-							send_to_M(minion, locationCoords, false, true, notUsed);
+							send_to_M(minion, locationCoords, true, false, true, notUsed);
 
 						}
 					} else {
 						Log.v("app.main", "pause == 0");
 						m_ioio_thread.set_speed(1500 + forwardSpeed);
 						m_ioio_thread.set_steering(1500);
-						dest_loc = destinationCoords;
+						//dest_loc = destinationCoords;
 
 					}
 				}
@@ -663,7 +689,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					//backCounter = 5;
 					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 					double[] notUsed = {0, 0};
-					send_to_M(minion, locationCoords, false,true, notUsed);
+					send_to_M(minion, locationCoords, true, false,true, notUsed);
 					if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
 						Log.v("app.main", "bucket on left");
 						backObstacleLeftCounter = 18;
@@ -742,9 +768,9 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			return deg-360;
 		else
 			return deg+360;
-		  
+
 	}
-	
+
 	//determine whether 2 directions are roughly pointing in the same direction, correcting for angle wraparound
 	public boolean sameDir(float dir1, float dir2){
 		float dir = bearing%360;
@@ -752,9 +778,9 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		//return (Math.abs((double) (headingMod - dir)) < 22.5 || Math.abs((double) (headingMod - dir)) > 337.5);
 		return (Math.abs((double) (headingMod - dir)) < 2.5 || Math.abs((double) (headingMod - dir)) > 357.5);
 	}
-	
+
 	//set the text of any text view in this application
-	public void setText(final String str, final TextView tv) 
+	public void setText(final String str, final TextView tv)
 	{
 		  runOnUiThread(new Runnable() {
 			  @Override
@@ -773,17 +799,20 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		autoMode = string_auto_mode.contains("true");
 		scanMode = string_scan_mode.contains("true");
 		destinationCoords = getCoords(string_coords);
-		Log.i("hahaha", "AUTOMODER " + autoMode);
+		//dest_loc = destinationCoords;
+		Log.i("hahaha", "AUTOMODE " + autoMode);
 	}
 
 	// sends minion's data to master
-	void send_to_M (Robots name, double[] location, Boolean scanMode, Boolean foundMann, double[] lgps) {
+	void send_to_M (Robots name, double[] location, Boolean reached, Boolean scanMode, Boolean foundMann, double[] lgps) {
 		toMaster = "";
 		// Add robot name
 		toMaster = toMaster + "NAME: " + name;
 
 		//REPLACE ## later w/ curr_loc.getLatitude & curr_loc.getLongitude
 		toMaster = toMaster + "GPS[LAT:" + location[0] + ", LON:" + location[1] + "], ";
+
+		toMaster = toMaster + "REACHED: " + reached;
 
 		toMaster = toMaster + "SCAN: " + scanMode;
 
