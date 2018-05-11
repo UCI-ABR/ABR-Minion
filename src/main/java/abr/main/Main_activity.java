@@ -74,7 +74,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 	Server server;
 	TextView msg;
 	Client mClient;
-	String phoneIp = "169.234." + "78.165";
+	String phoneIp = "169.234." + "105.88";
 
 	//for Minion:
 	String fromMaster = "", toMaster = "";
@@ -514,31 +514,45 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 			}
 		}
 
+		if (System.currentTimeMillis() - startTime > 9000000)
+			autoMode = false;
+
 		// majority of control exists here
-		if (autoMode && (System.currentTimeMillis()-startTime < 900000)) { // only move if autoMode is on and time under time limit
+		else if (autoMode && (System.currentTimeMillis()-startTime < 900000)) { // only move if autoMode is on and time under time limit
 
 			Log.i("hahaha", "starting");
-//			mHandler.postDelayed(new Runnable() {
-//				public void run() {
-//					double[] locationCoordsTest = {dest_loc.getLatitude(), dest_loc.getLongitude()};
-//					double[] notUsedTest = {0, 0};
-//					send_to_M(minion, locationCoordsTest, false,false, notUsedTest );
-//					Log.i("hahaha", "hi");
-//				}
-//			}, 10000);
+			if (scan) {
+				Log.i("hahaha", "scan");
+				m_ioio_thread.set_steeringSpeed(0.17f);
+				m_ioio_thread.set_steering(1600);
+				m_ioio_thread.set_speed(1600);
+				//m_ioio_thread.set_steeringSpeed(0.25f);
+				double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+				double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
+				send_to_M(minion, locationCoords, true, true, false, lgpsCoords);
+				mHandler.postDelayed(new Runnable() {
+					public void run() {
+						scan = false;
+						isFieldScanComplete = true;
+						double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+						double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
+						send_to_M(minion, locationCoords, true, false, false, lgpsCoords);
+					}
+				}, 10000);
+				Log.i("hahaha", "steering 1600");
+				Log.i("hahaha", "lidar value" + pulseDistance);
+				Log.i("hahaha", "lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
+			}
 
-
-			if (System.currentTimeMillis() - startTime > 9000000)
-				autoMode = false;
-
-			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && !isFieldScanComplete) {
-				Log.i("hahaha", "lidar scan starting");
-				if((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime <= 80000){
+			if ((minion == DOC || minion == MR || minion == MRS || minion == CARLITO) && !isFieldScanComplete && !scan) {
+				Log.i("hahaha", "go to corners");
+				if ((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime <= 80000) {
 					Log.i("hahaha", "80secondsStraight");
-					m_ioio_thread.set_speed(1500+forwardSpeed);
-				}
-				else if ((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime > 80000) {
+					m_ioio_thread.set_steering(1500);
+					m_ioio_thread.set_speed(1500 + forwardSpeed);
+				} else if ((minion == DOC || minion == MR) && System.currentTimeMillis() - startTime > 80000) {
 					Log.i("hahaha", "80secondsStop");
+					m_ioio_thread.set_steering(1500);
 					m_ioio_thread.set_speed(1500);
 					scan = true;
 					reached = true;
@@ -546,49 +560,128 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 					double[] notUsed = {0, 0};
 					send_to_M(minion, locationCoords, true, true, false, notUsed);
 				}
-				else if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime <= 5000){
+				if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime <= 5000) {
 					Log.i("hahaha", "5secondsStraight");
-					m_ioio_thread.set_speed(1500+forwardSpeed);
-				}
-				else if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime > 5000) {
+					m_ioio_thread.set_steering(1500);
+					m_ioio_thread.set_speed(1500 + forwardSpeed);
+				} else if ((minion == MRS || minion == CARLITO) && System.currentTimeMillis() - startTime > 5000) {
 					Log.i("hahaha", "5secondsStop");
+					m_ioio_thread.set_steering(1500);
 					m_ioio_thread.set_speed(1500);
-					//scan = true;
+					Log.i("hahaha", "1" + scan);
+					scan = true;
 					reached = true;
 					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
 					double[] notUsed = {0, 0};
+					Log.i("hahaha", "send" + scan);
 					send_to_M(minion, locationCoords, true, true, false, notUsed);
+					Log.i("hahaha", "2" + scan);
 				}
 			}
 
+			if (isFieldScanComplete) {
+				m_ioio_thread.set_steeringSpeed(0.6f);
+				Log.i("hahaha", "field scan complete");
+				//scan(mRgba);
+				if (backCounter > 0) {
+					Log.i("hahaha", "backCounter");
+					m_ioio_thread.set_steering(1500);
+					m_ioio_thread.set_speed(1500 - forwardSpeed / 2);//m_ioio_thread.move(1500-forwardSpeed);
+					panVal = 1500;
+					tiltVal = 1500;
+					backCounter--;
+					if (backCounter == 0)
+						pauseCounter = 5;
 
-
-				if (scan) {
-					Log.i("hahaha", "scan");
-						m_ioio_thread.set_speed(1600);
-						//m_ioio_thread.set_steeringSpeed(0.25f);
-						m_ioio_thread.set_steering(1600);
-						double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
-						double[] lgpsCoords = calculateMannequinnGpsCoordinates(locationCoords[0], locationCoords[1], pulseDistance, heading);
-						send_to_M(minion, locationCoords, true, true,false, lgpsCoords);
-						mHandler.postDelayed(new Runnable() {
-							public void run() {
-								scan = false;
-							}
-						}, 10000);
-						Log.i("hahaha", "steering 1600");
-						Log.i("hahaha", "number of scans" + wholeRobotScan);
-						Log.i("hahaha", "lidar value" + pulseDistance);
-						Log.i("hahaha", "lgps coords" + lgpsCoords[0] + lgpsCoords[1]);
-				}
-				else if (curr_loc == dest_loc && !scan) {
-						m_ioio_thread.set_speed(1500);
+				} else if (backObstacleLeftCounter > 0) {
+					Log.i("hahaha", "backObstacleLeft");
+					panVal = 1500;
+					tiltVal = 1500;
+					if (backObstacleLeftCounter > 10) {
+						m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
 						m_ioio_thread.set_steering(1500);
-						isFieldScanComplete = true;
-						Log.i("hahaha", "steering 1500, scan over");
+					} else {
+						m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
+						m_ioio_thread.set_steering(1600);
+					}
+					backObstacleLeftCounter--;
+					if (backObstacleLeftCounter == 0)
+						pauseCounter = 5;
+				} else if (backObstacleRightCounter > 0) {
+					Log.i("hahaha", "backObstacleRight");
+					panVal = 1500;
+					tiltVal = 1500;
+					if (backObstacleRightCounter > 10) {
+						m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
+						m_ioio_thread.set_steering(1500);
+					} else {
+						m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
+						m_ioio_thread.set_steering(1400);
+					}
+					backObstacleRightCounter--;
+					if (backObstacleRightCounter == 0)
+						pauseCounter = 5;
+				} else if (pauseCounter > 0) {
+					Log.i("hahaha", "pause");
+					m_ioio_thread.set_speed(1500);
+					m_ioio_thread.set_steering(1500);
+					pauseCounter--;
+					if (pauseCounter == 0) {
+						if (System.currentTimeMillis() - startTime > 870000) { // go to center at 9:30, might have to change this
+							dest_loc = centerLocation;
+							m_ioio_thread.set_speed(1500 + forwardSpeed);
+							m_ioio_thread.set_steering(1500);
+							//Log coordinates if the area of the orange bucket is greater than .01 of the screen
+							if (m_ioio_thread != null && (m_ioio_thread.get_ir2_reading() < 17
+									|| m_ioio_thread.get_ir1_reading() < 17 || m_ioio_thread.get_ir3_reading() < 17
+									|| (mDetector.getMaxArea() / (mDetector.getCenterX() * mDetector.getCenterY() * 4) > .12))) {
+								Log.v("app.main", "obstacle reached");
+								double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+								double[] notUsed = {0, 0};
+								send_to_M(minion, locationCoords, true, false, true, notUsed);
+
+							}
+						} else {
+							Log.v("app.main", "pause == 0");
+							m_ioio_thread.set_speed(1500 + forwardSpeed);
+							m_ioio_thread.set_steering(1500);
+							//dest_loc = destinationCoords;
+
+						}
+					}
 				}
-				else if(curr_loc != dest_loc && (System.currentTimeMillis() - startTime) > 80000) {
-					Log.i("hahaha", "moving");
+				//color blob detection
+				else if (m_ioio_thread != null && (m_ioio_thread.get_ir2_reading() < 17 || m_ioio_thread.get_ir1_reading() < 17
+						|| m_ioio_thread.get_ir3_reading() < 17 || (mDetector.getMaxArea() / (mDetector.getCenterX() * mDetector.getCenterY() * 4) > .12))) { //might have to change this value
+					//if(curr_loc.distanceTo(dest_loc) <= 25 && m_ioio_thread.get_ir2_reading() < 30 && (mDetector.getMaxArea()/(mDetector.getCenterX()*mDetector.getCenterY()*4) > .01)) //bucket reached
+					if (curr_loc.distanceTo(dest_loc) <= 70) { //bucket reached
+						Log.v("app.main", "bucket reached");
+						//backCounter = 5;
+						double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
+						double[] notUsed = {0, 0};
+						send_to_M(minion, locationCoords, true, false, true, notUsed);
+						if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
+							Log.v("app.main", "bucket on left");
+							backObstacleLeftCounter = 18;
+						} else { //bucket on right
+							Log.v("app.main", "bucket on right");
+							backObstacleRightCounter = 18;
+						}
+					} else { //avoiding obstacle
+						if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //obstacle on left
+							Log.v("app.main", "obstacle on left");
+							backObstacleLeftCounter = 18;
+							m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
+							m_ioio_thread.set_steering(1400);
+						} else { //obstacle on right
+							Log.v("app.main", "obstacle on right");
+							backObstacleRightCounter = 18;
+							m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
+							m_ioio_thread.set_steering(1600);
+						}
+
+					}
+				} else if (curr_loc.distanceTo(dest_loc) > 70) { // follow compass, might have to increase this to 10
 					float bearingMod = bearing % 360;
 					float headingMod = heading % 360;
 
@@ -604,157 +697,36 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 						else
 							m_ioio_thread.set_steering(1500 + turningSpeed);
 					}
-				}
-
-
-
-			//scan(mRgba);
-			if (backCounter > 0 ) {
-				Log.i("hahaha", "backCounter");
-				m_ioio_thread.set_steering(1500);
-				m_ioio_thread.set_speed(1500 - forwardSpeed / 2);//m_ioio_thread.move(1500-forwardSpeed);
-				panVal = 1500;
-				tiltVal = 1500;
-				backCounter--;
-				if (backCounter == 0)
-					pauseCounter = 5;
-
-			} else if (backObstacleLeftCounter > 0 ) {
-				Log.i("hahaha", "backObstacleLeft");
-				panVal = 1500;
-				tiltVal = 1500;
-				if (backObstacleLeftCounter > 10) {
-					//m_ioio_thread.set_steeringSpeed(0.6f);
-					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
-					m_ioio_thread.set_steering(1500);
-				} else {
-					//m_ioio_thread.set_steeringSpeed(0.6f);
-					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
-					m_ioio_thread.set_steering(1600);
-				}
-				backObstacleLeftCounter--;
-				if (backObstacleLeftCounter == 0)
-					pauseCounter = 5;
-			} else if (backObstacleRightCounter > 0) {
-				Log.i("hahaha", "backObstacleRight");
-				panVal = 1500;
-				tiltVal = 1500;
-				if (backObstacleRightCounter > 10) {
-					//m_ioio_thread.set_steeringSpeed(0.6f);
-					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
-					m_ioio_thread.set_steering(1500);
-				} else {
-					//m_ioio_thread.set_steeringSpeed(0.6f);
-					m_ioio_thread.set_speed(1500 - obstacleTurningSpeed);
-					m_ioio_thread.set_steering(1400);
-				}
-				backObstacleRightCounter--;
-				if (backObstacleRightCounter == 0)
-					pauseCounter = 5;
-			} else if (pauseCounter > 0 ) {
-				Log.i("hahaha", "pause");
-				m_ioio_thread.set_speed(1500);
-				m_ioio_thread.set_steering(1500);
-				pauseCounter--;
-				if (pauseCounter == 0) {
-					if (System.currentTimeMillis() - startTime > 870000) { // go to center at 9:30, might have to change this
-						dest_loc = centerLocation;
-						m_ioio_thread.set_speed(1500 + forwardSpeed);
+				} else { // follow orange bucket
+					double momentX = mDetector.getMomentX();
+					double momentY = mDetector.getMomentY();
+					int centerThreshold = (int) (.333 * mDetector.getCenterX());
+					if (mDetector.blobsDetected() == 0) {
+						m_ioio_thread.set_speed(1600);
 						m_ioio_thread.set_steering(1500);
-						//Log coordinates if the area of the orange bucket is greater than .01 of the screen
-						if (m_ioio_thread != null && (m_ioio_thread.get_ir2_reading() < 17
-								|| m_ioio_thread.get_ir1_reading() < 17 || m_ioio_thread.get_ir3_reading() < 17
-								|| (mDetector.getMaxArea() / (mDetector.getCenterX() * mDetector.getCenterY() * 4) > .12))) {
-							Log.v("app.main", "obstacle reached");
-							double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
-							double[] notUsed = {0, 0};
-							send_to_M(minion, locationCoords, true, false, true, notUsed);
-
+						Log.v("app.main", "delete me ");
+					} else {
+						if (momentX > centerThreshold) {
+							m_ioio_thread.set_speed(1600);
+							m_ioio_thread.set_steering(1600);
+							Log.v("app.main", "delete me ");
+						} else if (momentX < -centerThreshold) {
+							m_ioio_thread.set_speed(1600);
+							m_ioio_thread.set_steering(1400);
+							Log.v("app.main", "delete me ");
+						} else {
+							m_ioio_thread.set_speed(1600);
+							m_ioio_thread.set_steering(1500);
+							Log.v("app.main", "delete me ");
 						}
-					} else {
-						Log.v("app.main", "pause == 0");
-						m_ioio_thread.set_speed(1500 + forwardSpeed);
-						m_ioio_thread.set_steering(1500);
-						//dest_loc = destinationCoords;
-
 					}
 				}
 			}
-			//color blob detection
-			else if ( m_ioio_thread != null && (m_ioio_thread.get_ir2_reading() < 17 || m_ioio_thread.get_ir1_reading() < 17
-					|| m_ioio_thread.get_ir3_reading() < 17 || (mDetector.getMaxArea() / (mDetector.getCenterX() * mDetector.getCenterY() * 4) > .12))) { //might have to change this value
-				//if(curr_loc.distanceTo(dest_loc) <= 25 && m_ioio_thread.get_ir2_reading() < 30 && (mDetector.getMaxArea()/(mDetector.getCenterX()*mDetector.getCenterY()*4) > .01)) //bucket reached
-				if (curr_loc.distanceTo(dest_loc) <= 70) { //bucket reached
-					Log.v("app.main", "bucket reached");
-					//backCounter = 5;
-					double[] locationCoords = {curr_loc.getLatitude(), curr_loc.getLongitude()};
-					double[] notUsed = {0, 0};
-					send_to_M(minion, locationCoords, true, false,true, notUsed);
-					if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //bucket on left
-						Log.v("app.main", "bucket on left");
-						backObstacleLeftCounter = 18;
-					} else { //bucket on right
-						Log.v("app.main", "bucket on right");
-						backObstacleRightCounter = 18;
-					}
-				} else { //avoiding obstacle
-					if (m_ioio_thread.get_ir1_reading() < m_ioio_thread.get_ir3_reading()) { //obstacle on left
-						Log.v("app.main", "obstacle on left");
-						backObstacleLeftCounter = 18;
-						m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
-						m_ioio_thread.set_steering(1400);
-					} else { //obstacle on right
-						Log.v("app.main", "obstacle on right");
-						backObstacleRightCounter = 18;
-						m_ioio_thread.set_speed(1500-obstacleTurningSpeed);
-						m_ioio_thread.set_steering(1600);
-					}
-
-				}
-			} else if (curr_loc.distanceTo(dest_loc) > 70) { // follow compass, might have to increase this to 10
-				float bearingMod = bearing % 360;
-				float headingMod = heading % 360;
-
-				m_ioio_thread.set_speed(1500 + forwardSpeed);
-				if (bearingMod >= headingMod) {
-					if (bearingMod - headingMod <= 180)
-						m_ioio_thread.set_steering(1500 + turningSpeed);
-					else
-						m_ioio_thread.set_steering(1500 - turningSpeed);
-				} else {
-					if (headingMod - bearingMod <= 180)
-						m_ioio_thread.set_steering(1500 - turningSpeed);
-					else
-						m_ioio_thread.set_steering(1500 + turningSpeed);
-				}
-			} else { // follow orange bucket
-				double momentX = mDetector.getMomentX();
-				double momentY = mDetector.getMomentY();
-				int centerThreshold = (int) (.333 * mDetector.getCenterX());
-				if (mDetector.blobsDetected() == 0) {
-					m_ioio_thread.set_speed(1600);
-					m_ioio_thread.set_steering(1500);
-					Log.v("app.main", "delete me ");
-				} else {
-					if (momentX > centerThreshold) {
-						m_ioio_thread.set_speed(1600);
-						m_ioio_thread.set_steering(1600);
-						Log.v("app.main", "delete me ");
-					} else if (momentX < -centerThreshold) {
-						m_ioio_thread.set_speed(1600);
-						m_ioio_thread.set_steering(1400);
-						Log.v("app.main", "delete me ");
-					} else {
-						m_ioio_thread.set_speed(1600);
-						m_ioio_thread.set_steering(1500);
-						Log.v("app.main", "delete me ");
-					}
-				}
-			}
-		} else {
+		}else {
 			m_ioio_thread.set_speed(1500);
 			m_ioio_thread.set_steering(1500);
 		}
+
 
 		return mRgba;
 	}
@@ -799,7 +771,7 @@ public class Main_activity extends Activity implements IOIOLooperProvider, Senso
 		autoMode = string_auto_mode.contains("true");
 		scanMode = string_scan_mode.contains("true");
 		destinationCoords = getCoords(string_coords);
-		//dest_loc = destinationCoords;
+		dest_loc = destinationCoords;
 		Log.i("hahaha", "AUTOMODE " + autoMode);
 	}
 
