@@ -1,5 +1,7 @@
 package abr.main;
 
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -21,16 +23,17 @@ import java.util.Enumeration;
 public class Server {
     Main_activity activity;
     ServerSocket serverSocket;
-    String msgReply123 = "";
+    // original
     String message = "";
+    String msgReply ="";
     static final int socketServerPORT = 8080;
 
-    public Server(Main_activity activity, String msg) {
+    public Server(Main_activity activity, String msgReply) {
         this.activity = activity;
+        //this.msgReply = msgReply;
         Thread socketServerThread = new Thread(new SocketServerThread());
         socketServerThread.start();
     }
-
     public int getPort() {
         return socketServerPORT;
     }
@@ -58,15 +61,13 @@ public class Server {
                 while (true) {
                     Socket socket = serverSocket.accept();
                     count++;
-                    message = ""; /*+= "#" + count + " from "
-                            + socket.getInetAddress() + ":"
-                            + socket.getPort() + "\n";*/
+                    message = "";
 
                     activity.runOnUiThread(new Runnable() {
 
                         @Override
                         public void run() {
-                            activity.msg.setText(message);
+//                            activity.msg.setText(message);
                         }
                     });
 
@@ -88,6 +89,7 @@ public class Server {
         private Socket hostThreadSocket;
         int cnt;
 
+
         SocketServerReplyThread(Socket socket, int c) {
             hostThreadSocket = socket;
             cnt = c;
@@ -95,8 +97,9 @@ public class Server {
 
         @Override
         public void run() {
+
             OutputStream outputStream;
-            String msgReply = msgReply123; //= "HELLO FROM MASTER";
+            //"HELLO FROM MASTER";
             //"Hello from Master,send me your info, you are #" + cnt +"\n"; ////////////////////////////////////////////////////////////////
 
             try {
@@ -105,12 +108,15 @@ public class Server {
                 printStream.print(msgReply);
                 printStream.close();
 
+
+                Log.i("SERVRER","server" + msgReply);
+
                 message = "";//"Sent Text to black phone";
                 activity.runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-                        activity.msg.setText(message);
+                        // activity.msg.setText(message);
                     }
                 });
 
@@ -124,7 +130,7 @@ public class Server {
 
                 @Override
                 public void run() {
-                    activity.msg.setText(message);
+                    // activity.msg.setText(message);
                 }
             });
         }

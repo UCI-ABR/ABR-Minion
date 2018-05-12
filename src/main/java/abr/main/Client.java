@@ -1,6 +1,7 @@
 package abr.main;
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
@@ -45,7 +46,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
                 response += byteArrayOutputStream.toString("UTF-8");
 
             }
-            System.out.println("HELLO client response: "+response);
+            Log.i("HELLO client response: ", "hi"+response);
         } catch (UnknownHostException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
